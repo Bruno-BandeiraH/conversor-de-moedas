@@ -6,22 +6,31 @@ import java.net.http.HttpResponse;
 
 public class ExchangeRateApi {
 
-    private String apiKey;
-    private String address;
-    private HttpClient client;
+    private static final ExchangeRateApi instance = new ExchangeRateApi();
+
+    private final String address;
+    private final HttpClient client;
     private HttpRequest request;
 
-    public ExchangeRateApi() {
-        this.apiKey = "c19d9fdf00e44cd9f44a66b1";
+    private ExchangeRateApi() {
+        String apiKey = "c19d9fdf00e44cd9f44a66b1";
         this.address = "https://v6.exchangerate-api.com/v6/"
-            + this.apiKey + "/latest/USD";
+            + apiKey + "/latest/USD";
         this.client = HttpClient.newHttpClient();
+        initializeRequest();
+    }
+
+    private void initializeRequest() {
         this.request = HttpRequest.newBuilder()
             .uri(URI.create(this.address))
             .build();
     }
 
-    public String makeReques() {
+    public static ExchangeRateApi getInstance() {
+        return instance;
+    }
+
+    public String getExchangeRates() {
         String json = "";
         try {
             HttpResponse<String> response = client
