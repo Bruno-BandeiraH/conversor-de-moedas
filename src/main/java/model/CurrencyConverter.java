@@ -1,3 +1,5 @@
+package model;
+
 import java.util.InputMismatchException;
 import java.util.Map;
 import java.util.Scanner;
@@ -30,7 +32,7 @@ public class CurrencyConverter {
                     System.out.println("Por favor insira um valor positivo.");
                 }
             } catch (InputMismatchException e) {
-                System.out.println("Por favor, insira uma quantia válida, usando vírgula para as casas decimais.");
+                System.out.println("Por favor, insira uma quantia válida usando vírgula para as casas decimais.");
                 scanner.nextLine(); // to clean the buffer
             }
         }

@@ -1,3 +1,7 @@
+package utils;
+
+import utils.MenuOptions;
+
 public class Message {
 
     public static void greetings(){

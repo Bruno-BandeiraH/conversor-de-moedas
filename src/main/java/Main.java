@@ -1,6 +1,9 @@
+import api.ExchangeRateApi;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import model.CurrencyConverter;
+import service.CurrencyConversionService;
 
 import java.util.Scanner;
 

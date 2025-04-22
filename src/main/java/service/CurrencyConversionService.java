@@ -1,3 +1,9 @@
+package service;
+
+import model.CurrencyConverter;
+import utils.MenuOptions;
+import utils.Message;
+
 import java.util.Scanner;
 
 public class CurrencyConversionService {

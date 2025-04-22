@@ -1,8 +1,10 @@
+package utils;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public enum MenuOptions {
-    SAIR("SAIR", "sair do menu"),
+    SAIR("SAIR", "Sair do menu"),
     BRL("BRL", "Real brasileiro"),
     VES("VES", "Bolívar venezuelano"),
     BOB("BOB", "Boliviano da Bolivia"),
