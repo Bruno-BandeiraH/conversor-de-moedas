@@ -6,7 +6,7 @@ public class Message {
 
     public static void greetings(){
         System.out.println("-----------------------------------------------");
-        System.out.println("Seja bem vindo ao super conversor de moedas 3.0");
+        System.out.println("Seja bem-vindo(a) ao super conversor de moedas 3.0");
         System.out.println();
     }
 
