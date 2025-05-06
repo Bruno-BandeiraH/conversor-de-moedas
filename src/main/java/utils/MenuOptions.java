@@ -50,7 +50,7 @@ public enum MenuOptions {
     }
 
     public static MenuOptions getByNumber(int number) {
-        if(number < 0 || number > values().length) {
+        if(number < 0 || number > 8) {
             return null;
         }
         return values()[number];
@@ -61,11 +61,11 @@ public enum MenuOptions {
         boolean validInput = false;
 
         while(!validInput) {
-            Message.chooseCurrency();
+            Message.chooseOption();
             displayMenu();
             try{
                 choice = scanner.nextInt();
-                if(choice < 0 || choice > MenuOptions.values().length) {
+                if(choice < 0 || choice > MenuOptions.values().length - 1) {
                     System.out.println("Opção inválida!");
                 } else {
                     validInput = true;
@@ -79,7 +79,7 @@ public enum MenuOptions {
         return MenuOptions.getByNumber(choice);
     }
 
-    public static boolean isCurrencyCode(MenuOptions option) {
+    public static boolean isOption(MenuOptions option) {
         return option != MenuOptions.SAIR;
     }
 }

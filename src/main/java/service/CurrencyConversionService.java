@@ -24,7 +24,7 @@ public class CurrencyConversionService {
             MenuOptions newCurrency = null;
 
             option = MenuOptions.chooseOptionFromMenu(scanner);
-            if(MenuOptions.isCurrencyCode(option)) {
+            if(MenuOptions.isOption(option)) {
                 currentCurrency = option;
             } else {
                 break;
